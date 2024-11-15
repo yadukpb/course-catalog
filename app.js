@@ -33,7 +33,7 @@ app.use(helmet());
 app.use(compression());
 
 const corsOptions = {
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://yourdomain.com'],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://cloud-project-gj0kixszl-yadukrishna-pbs-projects.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
