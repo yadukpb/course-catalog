@@ -1,13 +1,11 @@
 {
-  "name": "docker-hello",
-  "private": true,
-  "version": "0.0.1",
+  "name": "cloud-project",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node app.js",
-    "start-server": "node --max-http-header-size=65535 app.js testApp",
-    "stop-server": "killall -SIGINT testApp",
-    "test-unit": "jest ./test/unit.test.js",
-    "test-fvt": "jest ./test/fvt.test.js",
     "build": "npm install"
   },
   "dependencies": {
