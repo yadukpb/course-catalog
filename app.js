@@ -40,6 +40,7 @@ const corsOptions = {
   maxAge: 86400
 };
 
+
 app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -60,7 +61,7 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 mongoose.connect(process.env.MONGODB_URI, {
-  serverSelectionTimeoutMS: 5000,
+    serverSelectionTimeoutMS: 5000,
   retryWrites: true,
   w: 'majority',
   tlsCAFile: process.env.CA_CERT_PATH,
